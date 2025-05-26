@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <style>
+        #a{
+            background-color: yellow;
+            width:300px;
+            text-align: center;
+            margin:100px auto;
+            padding:30px 0px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px white;
+
+        }
+        .e,.d,.c{
+            padding-top: 20px;
+            border: none;
+            outline:none;
+            border-bottom: 2px solid black;
+            background: none;
+        } 
+        .a1{
+            text-align: left;
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body style="background-color: black;">
+    <div id="a">
+        <div class="a1"><a href="{% url 'home' %}">⬅️</a></div>
+        <div ><input class="e" type="text" placeholder="Enter the Username"></div>
+        <div ><input class="d" type="password" placeholder="Enter the password"></div>
+        <div ><input class="c" type="password" placeholder="Re-enter the password"></div>
+        <div ><input class="b" type="submit"></div>
+
+    </div>
+</body>
+</html>
+{% endblock content %}
+{% block footer %}
+    <p>Welcome to login page</p>
+{% endblock footer %}
