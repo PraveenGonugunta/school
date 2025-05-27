@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from admissions.models import Admission
 
 # Create your views here.
 
 def home(request):
-    return render(request,'index.html',{})
+    data=Admission.objects.all()
+    res= render(request,'index.html',{'data':data})
+    return res
 
 def love(request):
     return render(request,'love.html',{})
