@@ -23,7 +23,7 @@
     <div>
         {% block content %}
 
-        <table cellpadding="20px" text-allign="center" border="2px solid black" style="margin: 70px auto">
+        <table cellpadding="20px" border="2px solid black" style="margin: 70px auto">
             <thead>
                 <tr>
                     <th>std name</th>
@@ -53,6 +53,32 @@
                 {% endfor%}
             </tbody>
         </table>
+        <!-- <div>
+            <form method="post">
+                {{ form_data}}
+                {% csrf_token %}
+                <input type="submit" value="add new admission">
+            </form>
+        </div> -->
+        <div>
+            {% csrf_token %}
+            <form method="post">
+                <table>
+                    <tr>
+                        <td>{{ form_data.std_id.label_tag }}</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_data.std_name.label_tag }}</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ form_data.std_age.label_tag }}</td>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
 
         {% endblock content %}
     </div>
