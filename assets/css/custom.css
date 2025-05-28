@@ -1,0 +1,30 @@
+.nav-bar{
+    text-align: center;
+    height: 50px;
+    border: 2px solid black;
+    padding-top: 10px;
+    font-size: 20px;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color:rgb(30, 79, 201);
+    margin-left: 20px;
+}
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+tr{
+    text-align: center;
+}
+.modify{
+    margin: 5px;
+    cursor: pointer;
+}
